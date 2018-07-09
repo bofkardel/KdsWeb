@@ -8,8 +8,8 @@ class HistoryPageTitle extends React.Component {
     render() {
         const styles = {
             title: {
-                height: '60px',
-                lineHeight: '60px',
+                height: '73px',
+                lineHeight: '73px',
                 background: '#383F4F',
                 position: 'fixed',
                 width: '100%',
@@ -23,7 +23,7 @@ class HistoryPageTitle extends React.Component {
                 textAlign: 'center',
                 fontSize: '30px',
                 color: '#ffffff',
-                height: '60px',
+                height: '73px',
                 fontWeight:'100',
                 letterSpacing:'-0.72px'
             },
@@ -36,7 +36,7 @@ class HistoryPageTitle extends React.Component {
                 fontWeight:'100',
             },
             titleText3: {
-                height: '60px',
+                height: '73px',
                 fontSize: '30px',
                 letterSpacing:'-0.72px',
                 color: '#ffffff',
@@ -47,7 +47,7 @@ class HistoryPageTitle extends React.Component {
             titleText4: {
                 float: 'right',
                 marginRight: '20px',
-                height: '60px',
+                height: '73px',
                 fontWeight: '100',
                 fontSize: '30px',
                 letterSpacing:'-0.72px',
@@ -57,7 +57,7 @@ class HistoryPageTitle extends React.Component {
             titleText5: {
                 float: 'right',
                 marginRight: '20px',
-                height: '60px',
+                height: '73px',
                 fontWeight: '900',
                 fontSize: '20px',
                 color: '#ffffff',
@@ -67,7 +67,7 @@ class HistoryPageTitle extends React.Component {
             titleImg: {
                 float: 'right',
                 marginRight: '10px',
-                lineHeight: '60px',
+                lineHeight: '73px',
                 marginTop: '5px',
             }
         }

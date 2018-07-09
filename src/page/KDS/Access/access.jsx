@@ -102,6 +102,12 @@ class AccessSystemPageBottom extends React.Component {
 class AccessSystemPageKeybroad extends React.Component {
     constructor(props) {
         super(props)
+        this.intent = this.intent.bind(this);
+    }
+
+    intent() {
+        localStorage.setItem('cook', 'dewhjrrjkfekwfjk');
+        window.location.replace('/history')
     }
 
     render() {
@@ -198,13 +204,15 @@ class AccessSystemPageKeybroad extends React.Component {
                 {/*</table>*/}
                 <div style={styles.acccessKeybroadButtonContent}>
                     <span style={styles.accessKeybroadButton}>清空</span>
-                    <span style={styles.accessKeybroadButton}>接入</span>
+                    <span style={styles.accessKeybroadButton} onClick={this.intent}>接入</span>
                 </div>
             </div>
 
         )
     }
 }
+
+
 
 
 class AccessSystemPageShow extends React.Component {
