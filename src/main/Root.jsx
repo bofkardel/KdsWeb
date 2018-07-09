@@ -5,11 +5,12 @@ import { Router, Route } from 'react-router-dom'
 import App from './App'
 import AccessSystemPage from '../page/KDS/Access/access';
 import history from './history';
+import HistoryPage from "../page/KDS/History/history";
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={AccessSystemPage} />
+      <Route path="/" component={HistoryPage} />
     </Router>
   </Provider>
 )
