@@ -68,7 +68,7 @@ class HistoryPageTitle extends React.Component {
                 float: 'right',
                 marginRight: '10px',
                 lineHeight: '73px',
-                marginTop: '5px',
+                marginTop: '12px',
             }
         }
 
