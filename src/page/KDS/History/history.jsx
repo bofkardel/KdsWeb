@@ -14,7 +14,7 @@ class HistoryPage extends React.Component {
         return (
 
             <div className='history'>
-                <div><PageTitle/></div>
+                <div><PageTitle stallname={'面档口（M01)'}/></div>
                 <div><HistoryPageContent list={orders}/></div>
                 <div><PageBottom/></div>
             </div>

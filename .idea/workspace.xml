@@ -6,14 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f65c2739-aca2-4c69-937d-5d561030ee31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Root.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Root.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +45,8 @@
       <file leaf-file-name="history.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="820" column="44" lean-forward="true" selection-start-line="820" selection-start-column="44" selection-end-line="820" selection-end-column="44" />
+            <state relative-caret-position="161">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -63,8 +57,17 @@
       <file leaf-file-name="login.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -139,11 +142,11 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" />
-        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.less" />
         <option value="$PROJECT_DIR$/node_modules/_antd@3.6.6@antd/lib/modal/Modal.d.ts" />
         <option value="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" />
         <option value="$PROJECT_DIR$/src/main/Root.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.jsx" />
       </list>
     </option>
@@ -165,8 +168,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="782" />
-    <option name="y" value="33" />
+    <option name="x" value="391" />
+    <option name="y" value="32" />
     <option name="width" value="2073" />
     <option name="height" value="1308" />
   </component>
@@ -308,15 +311,15 @@
       <workItem from="1531296162933" duration="13230000" />
       <workItem from="1531310007449" duration="22000" />
       <workItem from="1531310081594" duration="2064000" />
-      <workItem from="1531357436266" duration="19568000" />
+      <workItem from="1531357436266" duration="20515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99412000" />
+    <option name="totallyTimeSpent" value="100359000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="782" y="33" width="2073" height="1308" extended-state="0" />
+    <frame x="391" y="32" width="2073" height="1308" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
@@ -667,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -705,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Root.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -722,10 +711,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="820" column="44" lean-forward="true" selection-start-line="820" selection-start-column="44" selection-end-line="820" selection-end-column="44" />
+        <state relative-caret-position="161">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
