@@ -6,6 +6,7 @@ import App from './App'
 import AccessSystemPage from '../page/KDS/Access/access';
 import history from './history';
 import HistoryPage from "../page/KDS/History/history";
+import LoginPage from "../page/KDS/Login/login";
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -13,6 +14,7 @@ const Root = ({ store }) => (
             <div>
                 <Route exact path="/access" component={AccessSystemPage} />
                 <Route path="/history" component={HistoryPage} />
+                <Route path="/login" component={LoginPage}/>
             </div>
         </BrowserRouter>
   </Provider>

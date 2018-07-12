@@ -10,7 +10,7 @@ class LoginPage extends React.Component{
 
     render(){
         return(
-            <div>登录界面</div>
+            <div>123</div>
         )
     }
 }

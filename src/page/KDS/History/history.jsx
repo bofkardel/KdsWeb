@@ -1,26 +1,21 @@
 import React from 'react'
 import PageTitle from '../HeadFoot/head'
 import PageBottom from '../HeadFoot/foot'
-import {Row, Col} from 'antd';
+import {Row, Col, Modal, Button, Pagination} from 'antd';
 
 
 class HistoryPage extends React.Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-            pageNum: 2
-        };
-
     }
 
     render() {
 
         return (
 
-            <div>
+            <div className='history'>
                 <div><PageTitle/></div>
-                <div><HistoryPageContent list={orders} pageNum={this.state.pageNum}/></div>
+                <div><HistoryPageContent list={orders}/></div>
                 <div><PageBottom/></div>
             </div>
         )
@@ -32,8 +27,12 @@ var orders = [{
     name: '001桌',
     state: '已完成',
     time: '14：23',
-    remark: '',
+    remark: '加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣加辣',
     list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
         foodname: '椰汁桃胶',
         foodnum: '2',
         foodunit: '份'
@@ -106,7 +105,7 @@ var orders = [{
     }]
 }, {
     id: '4',
-    name: '028桌',
+    name: '004桌',
     state: '已完成',
     time: '15：28',
     remark: '',
@@ -125,7 +124,7 @@ var orders = [{
     }]
 }, {
     id: '5',
-    name: '饿了么#01',
+    name: '饿了么#005',
     state: '已完成',
     time: '17：45',
     remark: '',
@@ -216,7 +215,7 @@ var orders = [{
     }]
 }, {
     id: '6',
-    name: '美团#01',
+    name: '美团#006',
     state: '已完成',
     time: '14：34',
     remark: '香辣粉加辣加麻，再要一点香菜',
@@ -235,7 +234,7 @@ var orders = [{
     }]
 }, {
     id: '7',
-    name: '美团#02',
+    name: '美团#007',
     state: '已完成',
     time: '16：52',
     remark: '香辣粉加辣加麻，再要一点香菜',
@@ -254,7 +253,7 @@ var orders = [{
     }]
 }, {
     id: '8',
-    name: '美团#06',
+    name: '美团#008',
     state: '已完成',
     time: '17：53',
     remark: '',
@@ -273,7 +272,7 @@ var orders = [{
     }]
 }, {
     id: '9',
-    name: '美团#24',
+    name: '美团#009',
     state: '已完成',
     time: '19：45',
     remark: '',
@@ -292,7 +291,7 @@ var orders = [{
     }]
 }, {
     id: '10',
-    name: '美团#25',
+    name: '美团#010',
     state: '已完成',
     time: '19：45',
     remark: '',
@@ -311,7 +310,7 @@ var orders = [{
     }]
 }, {
     id: '11',
-    name: '美团#26',
+    name: '美团#011',
     state: '已完成',
     time: '19：45',
     remark: '',
@@ -330,7 +329,7 @@ var orders = [{
     }]
 }, {
     id: '12',
-    name: '美团#27',
+    name: '美团#012',
     state: '已完成',
     time: '19：45',
     remark: '',
@@ -349,7 +348,7 @@ var orders = [{
     }]
 }, {
     id: '13',
-    name: '美团#28',
+    name: '美团#013',
     state: '已完成',
     time: '19：45',
     remark: '',
@@ -368,9 +367,161 @@ var orders = [{
     }]
 }, {
     id: '14',
-    name: '美团#29',
+    name: '美团#014',
     state: '已完成',
     time: '19：45',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '15',
+    name: '美团#015',
+    state: '已完成',
+    time: '19：45',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '16',
+    name: '美团#016',
+    state: '已完成',
+    time: '19：45',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '17',
+    name: '017桌',
+    state: '已完成',
+    time: '13：11',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '18',
+    name: '018桌',
+    state: '已取消',
+    time: '14：23',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '19',
+    name: '019桌',
+    state: '已完成',
+    time: '15：28',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '20',
+    name: '020桌',
+    state: '已完成',
+    time: '15：28',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '21',
+    name: '021桌',
+    state: '已完成',
+    time: '15：28',
+    remark: '',
+    list: [{
+        foodname: '椰汁桃胶',
+        foodnum: '2',
+        foodunit: '份'
+    }, {
+        foodname: '香辣粉',
+        foodnum: '1',
+        foodunit: '碗'
+    }, {
+        foodname: '冻柠檬茶',
+        foodnum: '1',
+        foodunit: '杯'
+    }]
+}, {
+    id: '22',
+    name: '022桌',
+    state: '已完成',
+    time: '15：28',
     remark: '',
     list: [{
         foodname: '椰汁桃胶',
@@ -392,55 +543,97 @@ class HistoryPageContent extends React.Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            pageMax: this.props.list.length / 10,
+            hasNextPage: this.props.list.length > 10 ? true : false,
+            pages: 1,
+            list1: this.props.list.slice(0, 5),
+            list2: this.props.list.slice(5, 10),
+
+        }
+
+        this.onLastPage = this.onLastPage.bind(this);
+        this.onNextPage = this.onNextPage.bind(this);
+
+        console.log("pagemax = " + this.state.pageMax)
+    }
+
+
+    onLastPage() {
+        if (this.state.pages > 1) {
+            this.setState({
+                pages: this.state.pages - 1,
+            }, () => {
+                this.state.list1.push(this.props.list.slice(0 + (this.state.pages - 1) * 10, 5 + (this.state.pages - 1) * 10))
+                this.state.list2.push(this.props.list.slice(5 + (this.state.pages - 1) * 10, 10 + (this.state.pages - 1) * 10))
+
+                if (this.props.list.length > this.state.pages * 10) {
+                    this.setState({
+                        hasNextPage: true,
+                        list1: this.props.list.slice(0 + (this.state.pages - 1) * 10, 5 + (this.state.pages - 1) * 10),
+                        list2: this.props.list.slice(5 + (this.state.pages - 1) * 10, 10 + (this.state.pages - 1) * 10)
+                    });
+                } else
+                    this.setState({
+                        hasNextPage: false,
+                        list1: this.props.list.slice(0 + (this.state.pages - 1) * 10, 5 + (this.state.pages - 1) * 10),
+                        list2: this.props.list.slice(5 + (this.state.pages - 1) * 10, 10 + (this.state.pages - 1) * 10)
+                    })
+            })
+        }
+
+
+    }
+
+    onNextPage() {
+        if (this.state.hasNextPage) {
+            this.setState({
+                pages: this.state.pages + 1
+            }, () => {
+
+                if (this.props.list.length > this.state.pages * 10) {
+
+                    this.setState({
+                        hasNextPage: true,
+                        list1: this.props.list.slice(0 + (this.state.pages - 1) * 10, 5 + (this.state.pages - 1) * 10),
+                        list2: this.props.list.slice(5 + (this.state.pages - 1) * 10, 10 + (this.state.pages - 1) * 10)
+                    });
+
+
+                } else {
+                    this.setState({
+                        hasNextPage: false,
+                        list1: this.props.list.slice(0 + (this.state.pages - 1) * 10),
+                        list2: this.props.list.slice(5 + (this.state.pages - 1) * 10)
+                    });
+                }
+            })
+        }
+
+        else
+            Modal.info({
+                title: '提示',
+                content: (
+                    <div>
+                        <p>已经是最后一页了</p>
+                    </div>
+                ),
+                onOk() {
+                },
+            });
+
 
     }
 
 
     render() {
 
-        var pageorders = [];
-        if (this.props.list.length > (this.props.pageNum - 1) * 10) {
-            if (this.props.list.length > this.props.pageNum * 10) {
-                for (let i = 0; i < 10; i++) {
-                    pageorders.push(this.props.list[(this.props.pageNum-1)*10+i])
-                }
-            }else{
-                for (let i=0;i<this.props.list.length-(this.props.pageNum-1)*10;i++)
-                {
-                    pageorders.push(this.props.list[(this.props.pageNum-1)*10+i])
-                }
-            }
-        }
-
-        // console.log("222222222222" + this.props.list);
-        var list1 = [];
-        var list2 = [];
-
-        var num = pageorders.length;
-        var num2 = 0;
-        if (num >= 10)
-            num2 = 10;
-        else
-            num2 = num;
-        if (pageorders.length > 5) {
-            for (let i = 5; i < num2; i++) {
-                list2.push(pageorders[i]);
-            }
-        }
-        if (num >= 5)
-            num2 = 5;
-        else
-            num2 = num;
-        for (let i = 0; i < num2; i++) {
-            list1.push(pageorders[i])
-        }
-
 
         const
             styles = {
                 content: {
                     backgroundColor: '#FBFBFB',
-                    top: '74px',
+                    top: '34px',
                     bottom: '50px',
                     position: 'fixed',
                     width: '100%',
@@ -449,45 +642,59 @@ class HistoryPageContent extends React.Component {
                 },
                 titleText: {
                     color: '#333333',
-                    fontSize: '30px',
+                    fontSize: '20px',
                     letterSpacing: '-0.72px',
                     paddingTop: '9px',
                     width: '100%',
                     textAlign: 'center',
                     position: 'fixed',
-                    height: '67px'
+                    height: '50px'
                 },
 
                 buttonLayout: {
                     position: 'fixed',
-                    bottom: '50px',
+                    bottom: '30px',
                     width: '100%',
                     backgroundColor: '#FBFBFB',
-                    height: '128px',
+                    height: '68px',
                     textAlign: 'center'
                 },
                 buttonStyle: {
-                    fontSize: '30px',
+                    fontSize: '18px',
                     color: '#333333',
                     letterSpacing: '-0.72px',
                     textAlign: 'center',
-                    paddingTop: '22px',
-                    paddingBottom: '22px',
-                    paddingLeft: '62px',
-                    paddingRight: '66px',
+                    paddingTop: '12px',
+                    paddingBottom: '12px',
+                    paddingLeft: '52px',
+                    paddingRight: '56px',
                     border: '1px solid #E1E1E1',
                     borderRadius: '5px',
                     backgroundColor: '#ffffff',
-                    margin: '18px',
+                    margin: '12px',
+
+                }, buttonStyle2: {
+                    fontSize: '18px',
+                    color: '#E1E1E1',
+                    letterSpacing: '-0.72px',
+                    textAlign: 'center',
+                    paddingTop: '12px',
+                    paddingBottom: '12px',
+                    paddingLeft: '52px',
+                    paddingRight: '56px',
+                    border: '1px solid #E1E1E1',
+                    borderRadius: '5px',
+                    backgroundColor: '#ffffff',
+                    margin: '12px',
 
                 }, buttonsStyle: {
                     width: '100%',
-                    bottom: '90px',
+                    bottom: '50px',
                     position: 'fixed'
                 }, ordersContent: {
-                    marginTop: '67px',
+                    marginTop: '50px',
                     height: '100%',
-                    marginBottom: '128px',
+                    marginBottom: '88px',
                 }
 
             }
@@ -497,14 +704,19 @@ class HistoryPageContent extends React.Component {
             <div style={styles.content}>
                 <span style={styles.titleText}>历史订单</span>
                 <div style={styles.ordersContent}>
-                    <OrderListRow list={list1}/>
-                    <OrderListRow list={list2}/>
+                    <OrderListRow list={this.state.list1}/>
+                    <OrderListRow list={this.state.list2}/>
+
                 </div>
                 <div style={styles.buttonLayout}>
                     <div style={styles.buttonsStyle}>
-                        <text style={styles.buttonStyle}>返回厨显</text>
-                        <text style={styles.buttonStyle}>上一页</text>
-                        <text style={styles.buttonStyle}>下一页</text>
+                        <span style={styles.buttonStyle}>返回厨显</span>
+                        <span style={this.state.pages === 1 ? styles.buttonStyle2 : styles.buttonStyle}
+                              onClick={this.onLastPage}>上一页
+                        </span>
+                        <span style={this.state.hasNextPage ? styles.buttonStyle : styles.buttonStyle2}
+                              onClick={this.onNextPage}>下一页
+                        </span>
                     </div>
                 </div>
             </div>
@@ -524,21 +736,19 @@ class OrderListRow extends React.Component {
             if (!order) {
                 return;
             }
-            rows.push(<Col className="gutter-row" span={5} key={order.id}><OrderItem order={order}
-                                                                                     key={order.id}/></Col>);
+            rows.push(<Col className="gutter-row" span={5} key={order.id}><OrderItem order={order}/></Col>);
         });
-
 
         const styles = {
             contentList: {
                 width: '100%',
-                height: '430px',
+                height: '300px',
                 backgroundColor: '#FBFBFB',
                 boxSizing: 'border-box',
                 display: 'flex',
                 flexDirection: 'row',
-                paddingRight: '132px',
-                marginBottom: '25px',
+                paddingRight: '112px',
+                marginBottom: '10px',
             },
         }
 
@@ -559,17 +769,39 @@ class OrderItem extends React.Component {
         super(props)
 
         this.state = {
-            showMore: false
+            showMore: false,
+            modalCurrentPage:1,
         }
+
+
+        this.onPageChange=this.onPageChange.bind(this);
+    }
+
+    onPageChange(page,pageSize){
+
+        this.setState({
+            modalCurrentPage:page,
+        });
 
     }
 
-    componentDidMount() {
-        console.log("list高度 =" + this.refs.listheight.offsetHeight)
-        console.log("整个item高度 =" + this.refs.orderitemheight.offsetHeight)
-        console.log("list内容高度 =" + this.refs.listrealheight.offsetHeight);
 
-        if (this.refs.listrealheight.offsetHeight > this.refs.orderitemheight.offsetHeight * 0.61) {
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    }
+
+    hideModal = () => {
+        this.setState({
+            visible: false,
+        });
+    }
+
+
+
+    componentDidMount() {
+        if (this.refs.listrealheight.offsetHeight > this.refs.orderitemheight.offsetHeight * 0.62) {
             this.setState({
                 showMore: true
             });
@@ -578,13 +810,20 @@ class OrderItem extends React.Component {
 
 
     render() {
+
+
         const styles = {
             orderItemContent: {
                 marginLeft: '37px',
                 marginRight: '37px',
                 width: '100%',
-                height: '404px',
+                height: '274px',
                 border: '1px solid #464646',
+                backgroundColor:'#ffffff'
+            },
+            orderItemContentClick: {
+                width: '100%',
+                height: '238px',
             },
             orderItemTitle: {
                 height: '44px',
@@ -592,7 +831,7 @@ class OrderItem extends React.Component {
             },
             orderItemName: {
                 color: '#ffffff',
-                fontSize: '18px',
+                fontSize: '16px',
                 fontWeight: '400',
                 float: 'left',
                 marginLeft: '10px',
@@ -600,21 +839,23 @@ class OrderItem extends React.Component {
             },
             orderItemTime: {
                 color: '#ffffff',
-                fontSize: '18px',
+                fontSize: '12px',
                 fontWeight: '400',
                 float: 'right',
                 marginRight: '10px',
                 lineHeight: '44px'
-            }, orderItemList: {
-                height: '61%',
+            },
+            orderItemList: {
+                height: '62%',
                 backgroundColor: '#ffffff',
                 overflow: 'hidden',
-            }, orderItemBottom: {
+            },
+            orderItemBottom: {
                 backgroundColor: '#85A5D3',
-                height: '56px',
+                height: '36px',
                 color: '#ffffff',
-                fontSize: '24px',
-                lineHeight: '56px',
+                fontSize: '16px',
+                lineHeight: '36px',
                 textAlign: 'center',
                 width: '100%',
             },
@@ -623,9 +864,9 @@ class OrderItem extends React.Component {
             },
             orderItemListItemName: {
                 color: '#333333',
-                fontSize: '18px',
+                fontSize: '12px',
                 fontWeight: '200',
-                lineHeight: '35px',
+                lineHeight: '25px',
                 marginLeft: '10px',
                 width: '65%',
                 textAlign: 'bottom',
@@ -636,67 +877,71 @@ class OrderItem extends React.Component {
             },
             orderItemListIteNum: {
                 color: '#333333',
-                fontSize: '18px',
+                fontSize: '12px',
                 fontWeight: '200',
                 float: 'right',
                 marginRight: '10px',
-                lineHeight: '35px',
+                lineHeight: '25px',
                 textAlign: 'bottom',
                 position: 'absolute',
                 right: '0px',
                 bottom: '0px'
-            }, orderItemListShowMoreContent: {
+            },
+            orderItemListShowMoreContent: {
                 paddingLeft: '20px',
                 paddingRight: '20px',
-                paddingTop: '10px',
-                paddingBottom: '10px',
-                height: '57px',
+                paddingTop: '2px',
+                paddingBottom: '2px',
+                height: '27px',
                 width: '100%',
                 backgroundColor: '#ffffff',
-
+                marginTop: '10px'
             },
             orderItemListShowMore: {
                 color: '#4A90E2',
-                fontSize: '18px',
+                fontSize: '13px',
                 border: '1px solid #4A90E2',
                 borderRadius: '3px',
-                lineHeight: '36px',
+                lineHeight: '27px',
                 textAlign: 'center',
 
             },
             orderItemListShowMoreNoText: {
                 color: '#ffffff',
-                fontSize: '18px',
+                fontSize: '13px',
                 border: '1px solid #ffffff',
                 borderRadius: '3px',
-                lineHeight: '36px',
+                lineHeight: '27px',
                 textAlign: 'center',
-            }, orderItemRemark: {
+            },
+            orderItemRemark: {
                 backgroundColor: '#E4E4E4',
                 margin: '8px',
                 padding: '6px',
                 color: '#535353',
-                fontSize: '16px'
+                fontSize: '12px'
             }
 
 
         }
 
         var orderlist = [];
-        for (let i = 0; i < this.props.order.list.length; i++) {
-            orderlist.push(<div style={styles.orderItemListItem} key={i}>
-                <div style={styles.orderItemListItemName}>{this.props.order.list[i].foodname}</div>
-                <div
-                    style={styles.orderItemListIteNum}
-                    key={i}>{this.props.order.list[i].foodnum + this.props.order.list[i].foodunit}</div>
-            </div>);
+        if (this.props.order.list) {
+            console.log("order " + this.props.order.list)
+            for (let i = 0; i < this.props.order.list.length; i++) {
+                orderlist.push(<div style={styles.orderItemListItem} key={i}>
+                    <div style={styles.orderItemListItemName}>{this.props.order.list[i].foodname}</div>
+                    <div
+                        style={styles.orderItemListIteNum}
+                        key={i}>{this.props.order.list[i].foodnum + this.props.order.list[i].foodunit}</div>
+                </div>);
+            }
+            if (this.props.order.remark.length > 0)
+                orderlist.push(<div style={styles.orderItemRemark}>
+                    {this.props.order.remark}
+                </div>)
+
         }
-        if (this.props.order.remark.length > 0)
-            orderlist.push(<div style={styles.orderItemRemark}>
-                {this.props.order.remark}
-            </div>)
-
-
         var orderItemTitle = [];
         var orderItemList = [];
         var orderItemListShowMoreContent = [];
@@ -714,6 +959,7 @@ class OrderItem extends React.Component {
         if (this.state.showMore)
             orderItemListShowMoreContent.push(<div style={styles.orderItemListShowMoreContent}>
                 <div style={styles.orderItemListShowMore}>显示更多</div>
+
             </div>)
         else
             orderItemListShowMoreContent.push(<div style={styles.orderItemListShowMoreContent}>
@@ -724,16 +970,37 @@ class OrderItem extends React.Component {
         </div>)
 
         orderItem2.push(<div style={styles.orderItemContent}>
-            {orderItemTitle}
-            {orderItemList}
-            {orderItemListShowMoreContent}
+            <div style={styles.orderItemContentClick} onClick={this.state.showMore?this.showModal:null}>
+                {orderItemTitle}
+                {orderItemList}
+                {orderItemListShowMoreContent}
+            </div>
             {orderItemBottom}
         </div>)
+
+
+
 
 
         return (
             <div ref='orderitemheight'>
                 {orderItem2}
+
+                <Modal
+                    title="菜品详情"
+                    visible={this.state.visible}
+                    onOk={this.hideModal}
+                    footer={
+                        <Pagination defaultCurrent={1} total={this.props.order.list.length} defaultPageSize={14} onChange={this.onPageChange}/>
+                    }
+                    onCancel={this.hideModal}
+                    okText="确认"
+                    cancelText="取消"
+                >
+                    <div >
+                        {orderlist.slice(14*(this.state.modalCurrentPage-1),14+14*(this.state.modalCurrentPage-1))}
+                    </div>
+                </Modal>
             </div>
         )
     }
