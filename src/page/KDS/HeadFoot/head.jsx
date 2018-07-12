@@ -80,7 +80,7 @@ class HistoryPageTitle extends React.Component {
             <div style={styles.title}>
                 <span style={styles.titleText1}>食通宝</span>
                 <span style={styles.titleText2}>餐饮软件管理系统</span>
-                <span style={styles.titleText3}>{'KDS：'+this.props.stallname}</span>
+                <span style={styles.titleText3}>{(this.props.stallname)?'KDS：'+this.props.stallname:""}</span>
                 <span style={styles.titleText4}>注销</span>
                 <img style={styles.titleImg} src={require('../../../pic/logout.png')}/>
                 <span style={styles.titleText5}>__</span>

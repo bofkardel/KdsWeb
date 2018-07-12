@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f65c2739-aca2-4c69-937d-5d561030ee31" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" afterDir="false" />
     </list>
@@ -46,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -66,8 +67,8 @@
       <file leaf-file-name="head.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="527">
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -311,12 +312,12 @@
       <workItem from="1531296162933" duration="13230000" />
       <workItem from="1531310007449" duration="22000" />
       <workItem from="1531310081594" duration="2064000" />
-      <workItem from="1531357436266" duration="20515000" />
+      <workItem from="1531357436266" duration="20853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100359000" />
+    <option name="totallyTimeSpent" value="100697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="391" y="32" width="2073" height="1308" extended-state="0" />
@@ -720,15 +721,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="527">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
