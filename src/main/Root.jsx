@@ -7,6 +7,8 @@ import AccessSystemPage from '../page/KDS/Access/access';
 import history from './history';
 import HistoryPage from "../page/KDS/History/history";
 import LoginPage from "../page/KDS/Login/login";
+import ShopAccessPage from "../page/KDS/Access/shopaccess"
+import UserAccessPage from "../page/KDS/Access/useraccess";
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -15,6 +17,8 @@ const Root = ({ store }) => (
                 <Route exact path="/access" component={AccessSystemPage} />
                 <Route path="/history" component={HistoryPage} />
                 <Route path="/login" component={LoginPage}/>
+                <Route path="/shopaccess" component={ShopAccessPage}/>
+                <Route path="/useraccess" component={UserAccessPage}/>
             </div>
         </BrowserRouter>
   </Provider>
