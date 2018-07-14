@@ -13,7 +13,7 @@ class HistoryPage extends React.Component {
 
         return (
 
-            <div className='history'>
+            <div>
                 <div><PageTitle stallname={'面档口（M01)'}/></div>
                 <div><HistoryPageContent list={orders}/></div>
                 <div><PageBottom/></div>
@@ -611,16 +611,17 @@ class HistoryPageContent extends React.Component {
         }
 
         else
-            Modal.info({
-                title: '提示',
-                content: (
-                    <div>
-                        <p>已经是最后一页了</p>
-                    </div>
-                ),
-                onOk() {
-                },
-            });
+        {}
+            // Modal.info({.
+            //     title: '提示',
+            //     content: (
+            //         <div>
+            //             {/*<p>已经是最后一页了</p>*/}
+            //         </div>
+            //     ),
+            //     onOk() {
+            //     },
+            // });
 
 
     }
@@ -770,19 +771,46 @@ class OrderItem extends React.Component {
 
         this.state = {
             showMore: false,
-            modalCurrentPage:1,
+            modalCurrentPage: 1,
         }
 
 
-        this.onPageChange=this.onPageChange.bind(this);
+        this.onPageLast = this.onPageLast.bind(this);
+        this.onPageNext = this.onPageNext.bind(this);
+
+
     }
 
-    onPageChange(page,pageSize){
+    onPageLast() {
 
-        this.setState({
-            modalCurrentPage:page,
-        });
+        if (this.state.modalCurrentPage === 1) {
 
+        } else {
+            this.setState({
+                modalCurrentPage: this.state.modalCurrentPage-1,
+            });
+        }
+
+    }
+
+    onPageNext() {
+
+        if (this.props.order.list.length > this.state.modalCurrentPage * 14) {
+            this.setState({
+                modalCurrentPage: this.state.modalCurrentPage+1,
+            });
+        } else {
+            // Modal.info({
+            //     title: '提示',
+            //     content: (
+            //         <div>
+            //             <p>已经是最后一页了</p>
+            //         </div>
+            //     ),
+            //     onOk() {
+            //     },
+            // });
+        }
     }
 
 
@@ -797,7 +825,6 @@ class OrderItem extends React.Component {
             visible: false,
         });
     }
-
 
 
     componentDidMount() {
@@ -819,7 +846,7 @@ class OrderItem extends React.Component {
                 width: '100%',
                 height: '274px',
                 border: '1px solid #464646',
-                backgroundColor:'#ffffff'
+                backgroundColor: '#ffffff'
             },
             orderItemContentClick: {
                 width: '100%',
@@ -861,10 +888,11 @@ class OrderItem extends React.Component {
             },
             orderItemListItem: {
                 position: 'relative',
+                borderBottom:'1px #000000 solid'
             },
             orderItemListItemName: {
                 color: '#333333',
-                fontSize: '12px',
+                fontSize: '20px',
                 fontWeight: '200',
                 lineHeight: '25px',
                 marginLeft: '10px',
@@ -877,7 +905,7 @@ class OrderItem extends React.Component {
             },
             orderItemListIteNum: {
                 color: '#333333',
-                fontSize: '12px',
+                fontSize: '20px',
                 fontWeight: '200',
                 float: 'right',
                 marginRight: '10px',
@@ -920,14 +948,68 @@ class OrderItem extends React.Component {
                 padding: '6px',
                 color: '#535353',
                 fontSize: '12px'
-            }
+            },
 
+            modalTitle: {
+                display: 'flex',
+                flexDirection: 'row',
+            },
+
+            modalTitleTime: {},
+
+            modalTitleName: {
+                float: 'left',
+                marginLeft: '178px'
+            },
+            buttonStyleLast: {
+                fontSize: '12px',
+                color: '#333333',
+                letterSpacing: '-0.72px',
+                textAlign: 'center',
+                paddingTop: '5px',
+                paddingBottom: '5px',
+                paddingLeft: '22px',
+                paddingRight: '26px',
+                border: '1px solid #E1E1E1',
+                borderRadius: '5px',
+                backgroundColor: '#ffffff',
+                marginLeft: '80px',
+            },
+            buttonStyleNext: {
+                fontSize: '12px',
+                color: '#333333',
+                letterSpacing: '-0.72px',
+                textAlign: 'center',
+                paddingTop: '5px',
+                paddingBottom: '5px',
+                paddingLeft: '22px',
+                paddingRight: '26px',
+                border: '1px solid #E1E1E1',
+                borderRadius: '5px',
+                backgroundColor: '#ffffff',
+                marginLeft: '50px',
+
+            },
+            buttonStylePrint: {
+                fontSize: '12px',
+                color: '#ffffff',
+                letterSpacing: '-0.72px',
+                textAlign: 'center',
+                paddingTop: '5px',
+                paddingBottom: '5px',
+                paddingLeft: '22px',
+                paddingRight: '26px',
+                border: '1px solid #E1E1E1',
+                borderRadius: '5px',
+                backgroundColor: '#85A5D3',
+                marginLeft: '80px',
+
+            }
 
         }
 
         var orderlist = [];
         if (this.props.order.list) {
-            console.log("order " + this.props.order.list)
             for (let i = 0; i < this.props.order.list.length; i++) {
                 orderlist.push(<div style={styles.orderItemListItem} key={i}>
                     <div style={styles.orderItemListItemName}>{this.props.order.list[i].foodname}</div>
@@ -970,7 +1052,7 @@ class OrderItem extends React.Component {
         </div>)
 
         orderItem2.push(<div style={styles.orderItemContent}>
-            <div style={styles.orderItemContentClick} onClick={this.state.showMore?this.showModal:null}>
+            <div style={styles.orderItemContentClick} onClick={this.state.showMore ? this.showModal : null}>
                 {orderItemTitle}
                 {orderItemList}
                 {orderItemListShowMoreContent}
@@ -979,26 +1061,36 @@ class OrderItem extends React.Component {
         </div>)
 
 
-
-
-
         return (
             <div ref='orderitemheight'>
                 {orderItem2}
 
                 <Modal
-                    title="菜品详情"
+                    title={
+                        <div style={styles.modalTitle}>
+                            <div style={styles.modalTitleTime}>{this.props.order.time}</div>
+                            <div style={styles.modalTitleName}>{this.props.order.name}</div>
+                        </div>
+
+                    }
                     visible={this.state.visible}
                     onOk={this.hideModal}
                     footer={
-                        <Pagination defaultCurrent={1} total={this.props.order.list.length} defaultPageSize={14} onChange={this.onPageChange}/>
+                        <div style={styles.modalTitle}>
+
+                            <div style={styles.buttonStyleLast} onClick={this.onPageLast}>上一页</div>
+                            <div style={styles.buttonStyleNext} onClick={this.onPageNext}>下一页</div>
+                            <div style={styles.buttonStylePrint}>重打小票</div>
+
+                        </div>
+
                     }
                     onCancel={this.hideModal}
                     okText="确认"
                     cancelText="取消"
                 >
-                    <div >
-                        {orderlist.slice(14*(this.state.modalCurrentPage-1),14+14*(this.state.modalCurrentPage-1))}
+                    <div>
+                        {orderlist.slice(14 * (this.state.modalCurrentPage - 1), 14 + 14 * (this.state.modalCurrentPage - 1))}
                     </div>
                 </Modal>
             </div>

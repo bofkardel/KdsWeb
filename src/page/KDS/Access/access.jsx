@@ -106,7 +106,6 @@ class AccessSystemPageKeybroad extends React.Component {
     }
 
     intent() {
-        localStorage.setItem('cook', 'dewhjrrjkfekwfjk');
         window.location.replace('/history')
     }
 

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="941" />
-    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="744" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="1023" />
+    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="745" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f65c2739-aca2-4c69-937d-5d561030ee31" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Root.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Root.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/KDS/Access/access.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Access/access.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,32 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+      <file leaf-file-name="login.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -55,11 +36,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
+      <file leaf-file-name="access.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/access.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="885">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopaccess.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/shopaccess.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2220">
+              <caret line="151" column="66" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="useraccess.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="842">
+              <caret line="258" column="32" lean-forward="true" selection-start-line="258" selection-start-column="32" selection-end-line="258" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="1013" column="77" lean-forward="true" selection-start-line="1013" selection-start-column="77" selection-end-line="1013" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#18820#24125#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,29 +85,8 @@
       <file leaf-file-name="head.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Root.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Root.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.dev.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="118" column="65" selection-start-line="118" selection-start-column="65" selection-end-line="118" selection-end-column="65" />
+            <state relative-caret-position="1260">
+              <caret line="84" column="85" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -98,20 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>404</find>
-      <find>buttonLayout</find>
-      <find>buttonStyle</find>
-      <find>7</find>
-      <find>orderItemBottom</find>
-      <find>0.7</find>
-      <find>orderItemListShowMoreContent</find>
-      <find>bottom</find>
-      <find>orderItemListShowMore</find>
-      <find>listrealheight</find>
-      <find>ffffff</find>
-      <find>68</find>
-      <find>60</find>
-      <find>click</find>
       <find>handleClickDetail</find>
       <find>historyPageContentTitleText</find>
       <find>contentcontent</find>
@@ -120,14 +103,28 @@
       <find>detail</find>
       <find>orderItemListItemName</find>
       <find>orderItemListItem</find>
-      <find>hideModal</find>
       <find>visible</find>
-      <find>showModal</find>
-      <find>setState</find>
       <find>modalCurrentPage</find>
       <find>slice</find>
       <find>FBFBFB</find>
       <find>orderItemContent</find>
+      <find>hideModal</find>
+      <find>showModal</find>
+      <find>上一页</find>
+      <find>footer</find>
+      <find>onPageChange</find>
+      <find>modal</find>
+      <find>onPageNext</find>
+      <find>最后</find>
+      <find>orderitem</find>
+      <find>e</find>
+      <find>intent</find>
+      <find>shopaccessTitle</find>
+      <find>shopaccessInputContent</find>
+      <find>useraccessPasswordContent</find>
+      <find>setState</find>
+      <find>onPsAdd</find>
+      <find>list</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,17 +135,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/page/KDS/Access/text.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/headFoot.jsx" />
-        <option value="$PROJECT_DIR$/src/page/KDS/Access/access.jsx" />
         <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.less" />
         <option value="$PROJECT_DIR$/node_modules/_antd@3.6.6@antd/lib/modal/Modal.d.ts" />
+        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/Login/login.less" />
+        <option value="$PROJECT_DIR$/src/page/KDS/Access/access.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" />
         <option value="$PROJECT_DIR$/src/main/Root.jsx" />
-        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/Access/shopaccess.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx" />
       </list>
     </option>
   </component>
@@ -169,8 +169,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="391" />
-    <option name="y" value="32" />
+    <option name="x" value="756" />
+    <option name="y" value="29" />
     <option name="width" value="2073" />
     <option name="height" value="1308" />
   </component>
@@ -182,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,23 +227,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="KDS" type="462c0819:PsiDirectoryNode" />
-              <item name="HeadFoot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webKds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webKds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="KDS" type="462c0819:PsiDirectoryNode" />
               <item name="History" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webKds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webKds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="KDS" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webKds" type="b2602c69:ProjectViewProjectNode" />
@@ -262,6 +245,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,18 +296,19 @@
       <workItem from="1531296162933" duration="13230000" />
       <workItem from="1531310007449" duration="22000" />
       <workItem from="1531310081594" duration="2064000" />
-      <workItem from="1531357436266" duration="20853000" />
+      <workItem from="1531357436266" duration="29026000" />
+      <workItem from="1531445374160" duration="20003000" />
+      <workItem from="1531531047312" duration="2090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100697000" />
+    <option name="totallyTimeSpent" value="130963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="391" y="32" width="2073" height="1308" extended-state="0" />
+    <frame x="756" y="29" width="2073" height="1308" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18234442" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -335,6 +320,7 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39928058" />
+      <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -356,30 +342,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="183" column="39" lean-forward="true" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1770">
@@ -393,6 +355,7 @@
           <caret line="588" column="19" selection-start-line="588" selection-start-column="19" selection-end-line="588" selection-end-column="19" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -401,9 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -434,6 +394,7 @@
           <caret line="588" column="69" selection-start-line="588" selection-start-column="69" selection-end-line="588" selection-end-column="69" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -442,9 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -475,6 +433,7 @@
           <caret line="586" selection-start-line="586" selection-end-line="586" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -483,9 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -502,6 +458,7 @@
           <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -524,9 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -543,6 +497,7 @@
           <caret line="570" column="15" lean-forward="true" selection-start-line="570" selection-start-column="15" selection-end-line="570" selection-end-column="15" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -582,9 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,6 +553,7 @@
           <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -635,6 +588,7 @@
           <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
           </folding>
         </state>
       </provider>
@@ -647,20 +601,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/access.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,44 +636,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pic/menu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pic/logout.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pic/input.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pic/history.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/_antd@3.6.6@antd/lib/modal/Modal.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        <state relative-caret-position="917">
+          <caret line="96" column="14" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="14" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Root.jsx">
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/access.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="885">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="85" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.jsx">
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Login/login.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/shopaccess.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="2220">
+          <caret line="151" column="66" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+    <entry file="file://$PROJECT_DIR$/src/main/Root.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+        <state relative-caret-position="210">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="234">
+          <caret line="1013" column="77" lean-forward="true" selection-start-line="1013" selection-start-column="77" selection-end-line="1013" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#18820#24125#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="258" column="32" lean-forward="true" selection-start-line="258" selection-start-column="32" selection-end-line="258" selection-end-column="32" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
