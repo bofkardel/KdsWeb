@@ -4,3 +4,39 @@ body {
   font-family: sans-serif;
   background-color: red
 }
+.rightPanel{
+  position:fixed;
+  right:-3000px;
+  height:100%;
+  width:33.3%;
+  border:1px solid gray;
+  background-color:#fff;
+}
+.rightPanel2{
+  position:fixed;
+  right:0;
+  height:100%;
+  width:25%;
+  background-color:#fff;
+  box-shadow: -2px 2px 7px 0 rgba(0,0,0,0.30);
+}
+.initClose{
+  background: #FFFFFF;
+  box-shadow: -2px 2px 7px 0 rgba(0,0,0,0.30);
+  position:fixed;
+  right:-3000px;
+  width:40px;
+  height:100px;
+  border-Bottom-Left-Radius:20px;
+  cursor:pointer;
+}
+.lastClose{
+  background: #FFFFFF;
+  box-shadow: -2px 2px 7px 0 rgba(0,0,0,0.30);
+  position:fixed;
+  right:25%;
+  width:40px;
+  height:100px;
+  border-Bottom-Left-Radius:20px;
+  cursor:pointer;
+}

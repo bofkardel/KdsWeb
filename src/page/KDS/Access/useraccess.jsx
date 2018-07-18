@@ -2,6 +2,7 @@ import React from 'react'
 import PageTitle from '../HeadFoot/head'
 import PageBottom from '../HeadFoot/foot'
 import {Row, Col} from 'antd';
+import Background from '../../../pic/shopaccessbackground.png';
 
 
 class UserAccessPage extends React.Component {
@@ -11,23 +12,21 @@ class UserAccessPage extends React.Component {
         this.state = {
             password: '',
         }
-        this.backtologin = this.backtologin.bind(this);
-        this.onPsAdd = this.onPsAdd.bind(this);
+        //this.onPsAdd = this.onPsAdd.bind(this);
         this.onPsClear = this.onPsClear.bind(this);
         this.onPsMin = this.onPsMin.bind(this);
     }
 
-    backtologin() {
-        window.location.replace('/login')
-    }
 
     onPsAdd(num) {
-        if (this.state.password.length < 8) {
-
+        if (this.state.password.length < 7) {
             this.setState({
                 password: this.state.password + num,
             });
+        } else if (this.state.password.length === 7) {
+            window.location.replace('/home')
         }
+
     }
 
     onPsClear() {
@@ -44,7 +43,6 @@ class UserAccessPage extends React.Component {
         }
     }
 
-
     render() {
 
         const styles = {
@@ -52,7 +50,10 @@ class UserAccessPage extends React.Component {
                 width: '100%',
                 height: '100%',
                 position: 'fixed',
-                backgroundColor: '#4563ca'
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+                top: '36px',
+                backgroundImage: `url(${Background})`
             },
             loginCenterContent: {
                 width: '68%',
@@ -60,9 +61,7 @@ class UserAccessPage extends React.Component {
                 margin: 'auto',
                 marginTop: '118px',
                 display: 'flex',
-                backgroundColor: '#fff',
                 flexDirection: 'column',
-                boxShadow: '#565656 0px 0px 12px 1px'
             },
 
             loginBottom: {
@@ -148,20 +147,20 @@ class UserAccessPage extends React.Component {
                         <div style={styles.shopaccessTitle}>
                             <div style={styles.shopaccessTitleText}>员工登录</div>
                         </div>
-                        <PassWordContent password={111}/>
+                        <PassWordContent password={this.state.password}/>
 
 
                         <div style={styles.shopaccessButtonContent}>
                             <div style={styles.shopaccessButtonContentLeft}>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('7')}>7</div>
+                                        <div onClick={() => this.onPsAdd('7')}>7</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('8')}>8</div>
+                                        <div onClick={() => this.onPsAdd('8')}>8</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('9')}>9</div>
+                                        <div onClick={() => this.onPsAdd('9')}>9</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
                                         <img src={require('../../../pic/clear.png')} style={{width: '33px'}}
@@ -170,27 +169,27 @@ class UserAccessPage extends React.Component {
                                 </Row>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('4')}>4</div>
+                                        <div onClick={() => this.onPsAdd('4')}>4</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('5')}>5</div>
+                                        <div onClick={() => this.onPsAdd('5')}>5</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('6')}>6</div>
+                                        <div onClick={() => this.onPsAdd('6')}>6</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('0')}>0</div>
+                                        <div onClick={this.onPsAdd.bind(this, '0')}>0</div>
                                     </Col>
                                 </Row>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('1')}>1</div>
+                                        <div onClick={() => this.onPsAdd('1')}>1</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('2')}>2</div>
+                                        <div onClick={() => this.onPsAdd('2')}>2</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd('3')}>3</div>
+                                        <div onClick={() => this.onPsAdd('3')}>3</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
                                         <div onClick={this.onPsMin}>←</div>
@@ -218,6 +217,7 @@ class PassWordContent extends React.Component {
     constructor(props) {
         super(props)
 
+
     }
 
 
@@ -226,40 +226,40 @@ class PassWordContent extends React.Component {
         const styles = {
             useraccessPasswordContent: {
                 height: '15%',
-                display:'flex',
-                flexDirection:'row',
-                backgroundColor:'#000',
-                margin:'auto',
-                width:'100%'
+                margin: 'auto',
+                width: '100%'
             },
-            useraccessPasswords:{
-                width:'300px'
+            useraccessPasswords: {
+                margin: '0 auto',
+                display: 'flex',
+                flexDirection: 'row',
+                width: '68%',
             },
-            useraccessPasswordHas:{
-                backgroundColor:'#5678D2',
-                width:'15px',
-                height:'15px',
+            useraccessPasswordHas: {
+                backgroundColor: '#5678D2',
+                width: '20px',
+                height: '20px',
+                margin: '20px',
+                borderRadius: '50%'
             },
-            useraccessPasswordNo:{
-                backgroundColor:'#D8D8D8',
-                width:'15px',
-                height:'15px',
+            useraccessPasswordNo: {
+                backgroundColor: '#D8D8D8',
+                width: '20px',
+                height: '20px',
+                margin: '20px',
+                borderRadius: '50%',
             }
         }
 
-        var passwordContent=[];
 
-        for (let i=0;i<this.props.password.length;i++)
-        {
-            console.log("有 "+i);
+        var passwordContent = [];
+
+        for (let i = 0; i < this.props.password.length; i++) {
             passwordContent.push(<div style={styles.useraccessPasswordHas} key={i}/>)
         }
-        for (let i=0;i<8-this.props.password.length;i++)
-        {
-            console.log("无 "+i);
-            passwordContent.push(<div style={styles.useraccessPasswordNo} key={this.props.password.length+i+1}/>)
+        for (let i = 0; i < 8 - this.props.password.length; i++) {
+            passwordContent.push(<div style={styles.useraccessPasswordNo} key={this.props.password.length + i + 1}/>)
         }
-        console.log("passwordContent = "+passwordContent)
 
         return (
             <div style={styles.useraccessPasswordContent}>

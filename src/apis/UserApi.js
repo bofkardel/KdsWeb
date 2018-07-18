@@ -21,12 +21,4 @@ export default class UserApi {
         })
     }
 
-    static fetchCurrentUserInfo() {
-        return ApiBuilder.build(`${BASE_URL}/show/account/info`, {
-            method: 'GET'
-        })
-    }
-
-    
-
 }

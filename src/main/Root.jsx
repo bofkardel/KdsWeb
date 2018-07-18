@@ -9,16 +9,18 @@ import HistoryPage from "../page/KDS/History/history";
 import LoginPage from "../page/KDS/Login/login";
 import ShopAccessPage from "../page/KDS/Access/shopaccess"
 import UserAccessPage from "../page/KDS/Access/useraccess";
+import HomePage from "../page/KDS/Home/home"
 
 const Root = ({ store }) => (
   <Provider store={store}>
         <BrowserRouter>
             <div>
-                <Route exact path="/access" component={AccessSystemPage} />
+                <Route exact path="/" component={LoginPage}/>
+                <Route path="/access" component={AccessSystemPage} />
                 <Route path="/history" component={HistoryPage} />
-                <Route path="/login" component={LoginPage}/>
                 <Route path="/shopaccess" component={ShopAccessPage}/>
                 <Route path="/useraccess" component={UserAccessPage}/>
+                <Route path="/home" component={HomePage}/>
             </div>
         </BrowserRouter>
   </Provider>
