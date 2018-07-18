@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="1049" />
-    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="762" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="1053" />
+    <bookmark url="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx" line="766" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f65c2739-aca2-4c69-937d-5d561030ee31" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/UserApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/UserApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Root.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Root.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/Access/shopaccess.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Access/shopaccess.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/History/history.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/KDS/Home/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/KDS/Home/home.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,8 +73,17 @@
       <file leaf-file-name="foot.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1416">
-              <caret line="101" column="35" lean-forward="true" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+            <state relative-caret-position="45">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -94,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/Home/home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state relative-caret-position="15">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -112,23 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="history.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="721" column="40" lean-forward="true" selection-start-line="721" selection-start-column="40" selection-end-line="721" selection-end-column="40" />
+            <state relative-caret-position="279">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -182,7 +176,6 @@
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.less" />
         <option value="$PROJECT_DIR$/node_modules/_antd@3.6.6@antd/lib/modal/Modal.d.ts" />
-        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/Login/login.less" />
         <option value="$PROJECT_DIR$/src/page/KDS/Access/access.jsx" />
         <option value="$PROJECT_DIR$/src/apis/UserApi.js" />
@@ -191,9 +184,10 @@
         <option value="$PROJECT_DIR$/src/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/Root.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx" />
+        <option value="$PROJECT_DIR$/src/page/KDS/Home/home.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx" />
         <option value="$PROJECT_DIR$/src/page/KDS/History/history.jsx" />
-        <option value="$PROJECT_DIR$/src/page/KDS/Home/home.jsx" />
       </list>
     </option>
   </component>
@@ -214,8 +208,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="951" />
-    <option name="y" value="80" />
+    <option name="x" value="333" />
+    <option name="y" value="23" />
     <option name="width" value="2073" />
     <option name="height" value="1308" />
   </component>
@@ -371,15 +365,15 @@
       <workItem from="1531531047312" duration="16476000" />
       <workItem from="1531704084421" duration="16332000" />
       <workItem from="1531813081535" duration="3699000" />
-      <workItem from="1531877160706" duration="2785000" />
+      <workItem from="1531877160706" duration="3098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168165000" />
+    <option name="totallyTimeSpent" value="168478000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="951" y="80" width="2073" height="1308" extended-state="0" />
+    <frame x="333" y="23" width="2073" height="1308" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18234442" />
@@ -675,6 +669,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="917">
           <caret line="96" column="14" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/Access/useraccess.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -770,27 +760,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/Home/home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/foot.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="101" column="35" lean-forward="true" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/KDS/HeadFoot/head.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KDS/History/history.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="721" column="40" lean-forward="true" selection-start-line="721" selection-start-column="40" selection-end-line="721" selection-end-column="40" />
+        <state relative-caret-position="279">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/KDS/Home/home.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
         </state>
       </provider>
     </entry>

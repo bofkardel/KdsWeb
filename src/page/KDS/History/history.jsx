@@ -9,12 +9,16 @@ class HistoryPage extends React.Component {
         super(props)
 
         this.toHistory = this.toHistory.bind(this);
-
+        this.choiceStall=this.choiceStall.bind(this);
 
     }
 
     toHistory() {
         window.location.replace('/history')
+    }
+
+    choiceStall(){
+        alert('选择档口')
     }
 
 
@@ -23,7 +27,7 @@ class HistoryPage extends React.Component {
         return (
 
             <div>
-                <div><PageTitle stallname={'面档口（M01)'}/></div>
+                <div><PageTitle stallname={'面档口（M01)'} choiceStall={this.choiceStall}/></div>
                 <div><HistoryPageContent list={orders}/></div>
                 <div><PageBottom
                     toHistory={this.toHistory}/></div>
