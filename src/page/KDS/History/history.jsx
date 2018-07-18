@@ -7,16 +7,30 @@ import {Row, Col, Modal, Button, Pagination} from 'antd';
 class HistoryPage extends React.Component {
     constructor(props) {
         super(props)
+
+        this.toHistory = this.toHistory.bind(this);
+        this.choiceStall=this.choiceStall.bind(this);
+
     }
+
+    toHistory() {
+        window.location.replace('/history')
+    }
+
+    choiceStall(){
+        alert('选择档口')
+    }
+
 
     render() {
 
         return (
 
             <div>
-                <div><PageTitle stallname={'面档口（M01)'}/></div>
+                <div><PageTitle stallname={'面档口（M01)'} choiceStall={this.choiceStall}/></div>
                 <div><HistoryPageContent list={orders}/></div>
-                <div><PageBottom/></div>
+                <div><PageBottom
+                    toHistory={this.toHistory}/></div>
             </div>
         )
     }
@@ -89,7 +103,7 @@ var orders = [{
     name: '003桌',
     state: '已取消',
     time: '14：23',
-    remark: '',
+    remark: '奥斯卡大家好就考试了的看法结算单',
     list: [{
         foodname: '椰汁桃胶',
         foodnum: '2',
@@ -108,7 +122,7 @@ var orders = [{
     name: '004桌',
     state: '已完成',
     time: '15：28',
-    remark: '',
+    remark: '钢化膜那个表那电饭锅丰东股份',
     list: [{
         foodname: '椰汁桃胶',
         foodnum: '2',
@@ -554,8 +568,8 @@ class HistoryPageContent extends React.Component {
 
         this.onLastPage = this.onLastPage.bind(this);
         this.onNextPage = this.onNextPage.bind(this);
+        this.toHome=this.toHome.bind(this);
 
-        console.log("pagemax = " + this.state.pageMax)
     }
 
 
@@ -610,20 +624,27 @@ class HistoryPageContent extends React.Component {
             })
         }
 
-        else
-        {}
-            // Modal.info({.
-            //     title: '提示',
-            //     content: (
-            //         <div>
-            //             {/*<p>已经是最后一页了</p>*/}
-            //         </div>
-            //     ),
-            //     onOk() {
-            //     },
-            // });
+        else {
+            Modal.info({
+                title:
+                    '提示',
+                content:
+                    (
+                        <div>
+                            <p>已经是最后一页了</p>
+                        </div>
+                    ),
+                onOk() {
+                }
+                ,
+            })
+            ;
 
+        }
+    }
 
+    toHome(){
+        window.location.replace('/home')
     }
 
 
@@ -711,7 +732,7 @@ class HistoryPageContent extends React.Component {
                 </div>
                 <div style={styles.buttonLayout}>
                     <div style={styles.buttonsStyle}>
-                        <span style={styles.buttonStyle}>返回厨显</span>
+                        <span style={styles.buttonStyle} onClick={this.toHome}>返回厨显</span>
                         <span style={this.state.pages === 1 ? styles.buttonStyle2 : styles.buttonStyle}
                               onClick={this.onLastPage}>上一页
                         </span>
@@ -777,7 +798,14 @@ class OrderItem extends React.Component {
 
         this.onPageLast = this.onPageLast.bind(this);
         this.onPageNext = this.onPageNext.bind(this);
+        this.clickremark=this.clickremark.bind(this);
 
+
+    }
+
+    clickremark(i){
+
+                alert(this.props.order.list[i].foodname+this.props.order.list[i].foodnum + this.props.order.list[i].foodunit)
 
     }
 
@@ -787,7 +815,7 @@ class OrderItem extends React.Component {
 
         } else {
             this.setState({
-                modalCurrentPage: this.state.modalCurrentPage-1,
+                modalCurrentPage: this.state.modalCurrentPage - 1,
             });
         }
 
@@ -797,19 +825,19 @@ class OrderItem extends React.Component {
 
         if (this.props.order.list.length > this.state.modalCurrentPage * 14) {
             this.setState({
-                modalCurrentPage: this.state.modalCurrentPage+1,
+                modalCurrentPage: this.state.modalCurrentPage + 1,
             });
         } else {
-            // Modal.info({
-            //     title: '提示',
-            //     content: (
-            //         <div>
-            //             <p>已经是最后一页了</p>
-            //         </div>
-            //     ),
-            //     onOk() {
-            //     },
-            // });
+            Modal.info({
+                title: '提示',
+                content: (
+                    <div>
+                        <p>已经是最后一页了</p>
+                    </div>
+                ),
+                onOk() {
+                },
+            });
         }
     }
 
@@ -888,7 +916,7 @@ class OrderItem extends React.Component {
             },
             orderItemListItem: {
                 position: 'relative',
-                borderBottom:'1px #000000 solid'
+                borderBottom: '1px #000000 solid'
             },
             orderItemListItemName: {
                 color: '#333333',
@@ -1011,15 +1039,17 @@ class OrderItem extends React.Component {
         var orderlist = [];
         if (this.props.order.list) {
             for (let i = 0; i < this.props.order.list.length; i++) {
-                orderlist.push(<div style={styles.orderItemListItem} key={i}>
+                var orderList = <div style={styles.orderItemListItem} key={i} onClick={()=>this.clickremark(i)}>
                     <div style={styles.orderItemListItemName}>{this.props.order.list[i].foodname}</div>
                     <div
                         style={styles.orderItemListIteNum}
-                        key={i}>{this.props.order.list[i].foodnum + this.props.order.list[i].foodunit}</div>
-                </div>);
+                    >{this.props.order.list[i].foodnum + this.props.order.list[i].foodunit}</div>
+                </div>
+                orderlist.push(orderList)
             }
+
             if (this.props.order.remark.length > 0)
-                orderlist.push(<div style={styles.orderItemRemark}>
+                orderlist.push(<div key={this.props.order.id} style={styles.orderItemRemark}>
                     {this.props.order.remark}
                 </div>)
 
