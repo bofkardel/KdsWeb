@@ -15,6 +15,12 @@ class UserAccessPage extends React.Component {
         //this.onPsAdd = this.onPsAdd.bind(this);
         this.onPsClear = this.onPsClear.bind(this);
         this.onPsMin = this.onPsMin.bind(this);
+        this.logout=this.logout.bind(this);
+    }
+
+
+    logout(){
+
     }
 
 
@@ -175,7 +181,7 @@ class UserAccessPage extends React.Component {
 
         return (
             <div>
-                <div><PageTitle/></div>
+                <div><PageTitle logout={this.logout}/></div>
 
                 <div style={styles.loginBg}>
 

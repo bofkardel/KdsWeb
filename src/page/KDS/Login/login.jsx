@@ -11,6 +11,11 @@ class LoginPage extends React.Component {
 
 
         this.toKDS = this.toKDS.bind(this);
+        this.logout=this.logout.bind(this);
+    }
+
+    logout(){
+
     }
 
     toKDS() {
@@ -125,7 +130,7 @@ class LoginPage extends React.Component {
 
         return (
             <div>
-                <div><PageTitle/></div>
+                <div><PageTitle logout={this.logout}/></div>
 
                 <div style={styles.loginBg}>
 

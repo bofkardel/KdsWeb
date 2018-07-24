@@ -19,9 +19,15 @@ class HistoryPage extends React.Component {
 
         this.toHistory = this.toHistory.bind(this);
         this.choiceStall = this.choiceStall.bind(this);
-        this.initKds = this.initKds.bind(this)
+        this.initKds = this.initKds.bind(this);
+        this.logout=this.logout.bind(this)
 
         this.initKds()
+    }
+
+    logout(){
+        localStorage.removeItem('staff')
+        window.location.replace('/useraccess')
     }
 
     initKds() {
@@ -68,7 +74,7 @@ class HistoryPage extends React.Component {
 
             <div>
                 <div><PageTitle stallname={JSON.parse(localStorage.getItem('currkds')).kds.name}
-                                choiceStall={this.choiceStall}/></div>
+                                choiceStall={this.choiceStall} logout={this.logout}/></div>
                 <div><HistoryPageContent list={this.state.kdsorders} list1={this.state.list1}
                                          list2={this.state.list2}
                                          pageMax={this.state.pageMax}

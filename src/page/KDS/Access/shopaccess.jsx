@@ -23,7 +23,11 @@ class ShopAccessPage extends React.Component {
         this.accesstouser = this.accesstouser.bind(this);
         this.inputOnFocusShop = this.inputOnFocusShop.bind(this);
         this.inputOnFocus = this.inputOnFocus.bind(this);
+        this.logout=this.logout.bind(this);
 
+    }
+
+    logout(){
 
     }
 
@@ -239,7 +243,7 @@ class ShopAccessPage extends React.Component {
 
         return (
             <div>
-                <div><PageTitle/></div>
+                <div><PageTitle  logout={this.logout}/></div>
 
                 <div style={styles.loginBg}>
 

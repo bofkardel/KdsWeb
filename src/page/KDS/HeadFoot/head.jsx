@@ -6,11 +6,16 @@ class HistoryPageTitle extends React.Component {
 
 
         this.choiceStall=this.choiceStall.bind(this);
+        this.logout=this.logout.bind(this)
     }
 
 
     choiceStall(){
         this.props.choiceStall();
+    }
+
+    logout(){
+        this.props.logout();
     }
 
     render() {
@@ -95,7 +100,7 @@ class HistoryPageTitle extends React.Component {
                 <span style={styles.titleText1}>食通宝</span>
                 <span style={styles.titleText2}>餐饮软件管理系统</span>
                 <span style={styles.titleText3} onClick={this.choiceStall}>{(this.props.stallname)?'KDS：'+this.props.stallname:""}</span>
-                <span style={styles.titleText4}>注销</span>
+                <span style={styles.titleText4} onClick={this.logout}>注销</span>
                 <img style={styles.titleImg} src={require('../../../pic/logout.png')}/>
                 <span style={styles.titleText5}>__</span>
             </div>
