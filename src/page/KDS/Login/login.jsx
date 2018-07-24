@@ -55,6 +55,7 @@ class LoginPage extends React.Component {
                 fontWeight: '100',
                 position: 'relative',
                 top: '50px',
+                userSelect: 'none',
             },
             loginCenterName1: {
                 color: '#ffffff',
@@ -63,6 +64,7 @@ class LoginPage extends React.Component {
                 position: 'relative',
                 top: '60px',
                 fontWeight: '300',
+                userSelect: 'none',
             },
             loginCenterName2: {
                 color: '#ffffff',
@@ -71,6 +73,7 @@ class LoginPage extends React.Component {
                 marginLeft: '6px',
                 position: 'relative',
                 top: '60px',
+                userSelect: 'none',
             },
             loginCenterChoiceTitle: {
                 color: '#3E485A',
@@ -79,6 +82,7 @@ class LoginPage extends React.Component {
                 marginLeft: '52px',
                 position: 'relative',
                 top: '65px',
+                userSelect: 'none',
             },
             loginCenterChoicePos: {
                 color: '#3E485A',
@@ -114,6 +118,7 @@ class LoginPage extends React.Component {
                 color: '#fff',
                 fontWeight: '100',
                 textShadow: '#000 3px 3px 4px',
+                userSelect:'none',
             }
         }
 
@@ -134,9 +139,9 @@ class LoginPage extends React.Component {
                         <div style={styles.loginCenterRight}>
                             <div style={styles.loginCenterChoiceTitle}>选择使用系统:</div>
                             <div style={styles.loginCenterSystems}>
-                                <button style={styles.loginCenterChoicePos} onClick={this.toPos}>收银系统</button>
-                                <button style={styles.loginCenterChoicePos} onClick={this.toQuickPos}>收银系统(快餐)</button>
-                                <button style={styles.loginCenterChoicePos} onClick={this.toKDS}>KDS厨显系统</button>
+                                <span style={styles.loginCenterChoicePos} onClick={this.toPos}>收银系统</span>
+                                <span style={styles.loginCenterChoicePos} onClick={this.toQuickPos}>收银系统(快餐)</span>
+                                <span style={styles.loginCenterChoicePos} onClick={this.toKDS}>KDS厨显系统</span>
                             </div>
                         </div>
                     </div>

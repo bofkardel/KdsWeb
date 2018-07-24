@@ -24,10 +24,45 @@ class UserAccessPage extends React.Component {
                 password: this.state.password + num,
             });
         } else if (this.state.password.length === 7) {
-            window.location.replace('/home')
+            this.setState({
+                password: this.state.password + num,
+            },()=>{
+                const staffs = JSON.parse(localStorage.getItem('staffs'))
+                const shopdata = localStorage.getItem('shopdata')
+                const crypto = require('crypto');
+                console.log('this.state.password = ' + this.state.password )
+                console.log('salt = ' + JSON.parse(shopdata).operationData.shop.salt)
+                var content = this.state.password + JSON.parse(shopdata).operationData.shop.salt
+                var sha1 = crypto.createHash('sha1');
+
+
+                sha1.update(content);
+                var sign = sha1.digest('hex');
+                console.log("加密后 = " + sign)
+                var staff
+                for (let i = 0; i < staffs.length; i++) {
+
+                    // if (staffs[i].password === sign && (!staffs[i].rfid || staffs[i].rfid !== (this.state.password))) {
+                    //     staff = staffs[i]
+                    //     console.log('找到的用户为 ='+staff)
+                    // }
+                    if(staffs[i].password===sign && (staffs[i].rfid === null || staffs[i].rfid !== (this.state.password)))
+                    {
+                        staff=staffs[i]
+                    }
+
+                }
+                if (staff) {
+                    console.log('登录的账号为 ' + staff.name)
+                    localStorage.setItem('staff',staff)
+                    window.location.replace('/home')
+                }
+            });
+
         }
 
     }
+
 
     onPsClear() {
         this.setState({
@@ -77,6 +112,7 @@ class UserAccessPage extends React.Component {
                 color: '#fff',
                 fontWeight: '100',
                 textShadow: '#000 3px 3px 4px',
+                userSelect: 'none',
             },
 
             shopaccessTitle: {
@@ -91,6 +127,7 @@ class UserAccessPage extends React.Component {
                 textAlign: 'center',
                 color: 'black',
                 lineHeight: '56px',
+                userSelect: 'none',
             },
 
 
@@ -154,45 +191,46 @@ class UserAccessPage extends React.Component {
                             <div style={styles.shopaccessButtonContentLeft}>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('7')}>7</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('7')}>7</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('8')}>8</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('8')}>8</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('9')}>9</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('9')}>9</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <img src={require('../../../pic/clear.png')} style={{width: '33px'}}
+                                        <img src={require('../../../pic/clear.png')}
+                                             style={{width: '33px', userSelect: 'none'}}
                                              onClick={this.onPsClear}/>
                                     </Col>
                                 </Row>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('4')}>4</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('4')}>4</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('5')}>5</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('5')}>5</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('6')}>6</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('6')}>6</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsAdd.bind(this, '0')}>0</div>
+                                        <div style={{userSelect: 'none'}} onClick={this.onPsAdd.bind(this, '0')}>0</div>
                                     </Col>
                                 </Row>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('1')}>1</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('1')}>1</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('2')}>2</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('2')}>2</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onPsAdd('3')}>3</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onPsAdd('3')}>3</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.onPsMin}>←</div>
+                                        <div style={{userSelect: 'none'}} onClick={this.onPsMin}>←</div>
                                     </Col>
                                 </Row>
                             </div>

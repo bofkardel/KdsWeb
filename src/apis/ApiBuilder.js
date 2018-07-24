@@ -15,7 +15,6 @@ export default class ApiBuilder {
         paras.mode = 'cors'
         paras.credentials = 'include'
         return fetch(url, paras)
-            .then(checkStatus)
             .then(res => res.json())
             .catch(e => e);
     }

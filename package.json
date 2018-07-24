@@ -53,12 +53,21 @@
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
+
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
-  "proxy": "https://test.sanyipos.com",
+  "proxy": {
+    "/apis": {
+      "target": "http://192.168.1.228:9090",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/apis": ""
+      }
+    }
+  },
   "devDependencies": {
     "babel-plugin-import": "^1.8.0",
     "less": "^3.7.0",
