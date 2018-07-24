@@ -1,8 +1,9 @@
 import React from 'react'
 import PageTitle from '../HeadFoot/head'
 import PageBottom from '../HeadFoot/foot'
-import {Row, Col} from 'antd';
+import {Row, Col, Modal} from 'antd';
 import Background from '../../../pic/shopaccessbackground.png';
+import UserApi from '../../../apis/UserApi';
 
 
 class ShopAccessPage extends React.Component {
@@ -20,8 +21,8 @@ class ShopAccessPage extends React.Component {
         this.clearinput = this.clearinput.bind(this);
         this.mininput = this.mininput.bind(this);
         this.accesstouser = this.accesstouser.bind(this);
-        this.inputOnFocusShop=this.inputOnFocusShop.bind(this);
-        this.inputOnFocus=this.inputOnFocus.bind(this);
+        this.inputOnFocusShop = this.inputOnFocusShop.bind(this);
+        this.inputOnFocus = this.inputOnFocus.bind(this);
 
 
     }
@@ -71,16 +72,14 @@ class ShopAccessPage extends React.Component {
     }
 
 
-
-
-    inputOnFocusShop(){
+    inputOnFocusShop() {
         this.setState({
             isInputAccesscode: true,
         });
 
     }
 
-    inputOnFocus(){
+    inputOnFocus() {
         this.setState({
             isInputAccesscode: false,
         });
@@ -88,7 +87,38 @@ class ShopAccessPage extends React.Component {
 
 
     accesstouser() {
-        window.location.replace('/useraccess')
+        // window.location.replace('/useraccess')
+        UserApi.codeaccess(this.state.accesscode).then((res) => {
+
+            localStorage.setItem("shopres", JSON.stringify(res))
+            if (res.access_code) {
+                UserApi.getshopdata(res.id, res.shop_id, res.version, 1)
+                    .then((res) => {
+                        localStorage.setItem("shopdata", JSON.stringify(res))
+                        localStorage.setItem("kdses", JSON.stringify(res.kdses))
+                        localStorage.setItem("currkds", JSON.stringify(res.kdses[0]))
+                        localStorage.setItem("staffs",JSON.stringify(res.staffs))
+                        window.location.replace('/useraccess')
+                    })
+            } else {
+                Modal.info({
+                    title:
+                        '提示',
+                    content:
+                        (
+                            <div>
+                                <p>{res.message}</p>
+                            </div>
+                        ),
+                    onOk() {
+                    }
+                    ,
+                })
+            }
+
+        })
+
+
     }
 
 
@@ -126,6 +156,7 @@ class ShopAccessPage extends React.Component {
                 color: '#fff',
                 fontWeight: '100',
                 textShadow: '#000 3px 3px 4px',
+                userSelect: 'none',
             },
             shopaccessBack: {
                 width: '40px',
@@ -144,6 +175,7 @@ class ShopAccessPage extends React.Component {
                 textAlign: 'center',
                 color: 'black',
                 lineHeight: '56px',
+                userSelect: 'none',
             },
             shopaccessInputContent: {
                 textAlign: 'center',
@@ -200,6 +232,7 @@ class ShopAccessPage extends React.Component {
                 height: '40%',
                 lineHeight: '4',
                 marginTop: '12px',
+                userSelect: 'none',
             }
         }
 
@@ -222,7 +255,7 @@ class ShopAccessPage extends React.Component {
                                 placeholder="门店接入码"
                                 value={this.state.accesscode}
                                 style={styles.shopaccessInput}
-                                onFocus={this.inputOnFocusShop }
+                                onFocus={this.inputOnFocusShop}
                             />
                             <p>
                                 <input
@@ -230,7 +263,7 @@ class ShopAccessPage extends React.Component {
                                     placeholder="主机IP地址"
                                     value={this.state.ipaddress}
                                     style={styles.shopaccessInput}
-                                    onFocus={this.inputOnFocus }
+                                    onFocus={this.inputOnFocus}
                                 />
                             </p>
                         </form>
@@ -238,44 +271,44 @@ class ShopAccessPage extends React.Component {
                             <div style={styles.shopaccessButtonContentLeft}>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('7')}>7</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('7')}>7</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('8')}>8</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('8')}>8</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('9')}>9</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('9')}>9</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('.')}>.</div>
-                                    </Col>
-                                </Row>
-                                <Row style={styles.shopaccessButtonRow}>
-                                    <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('4')}>4</div>
-                                    </Col>
-                                    <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('5')}>5</div>
-                                    </Col>
-                                    <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('6')}>6</div>
-                                    </Col>
-                                    <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('0')}>0</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('.')}>.</div>
                                     </Col>
                                 </Row>
                                 <Row style={styles.shopaccessButtonRow}>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('1')}>1</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('4')}>4</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('2')}>2</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('5')}>5</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={() => this.onadd('3')}>3</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('6')}>6</div>
                                     </Col>
                                     <Col span={5} style={styles.shopaccessButtonCol}>
-                                        <div onClick={this.mininput}>←</div>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('0')}>0</div>
+                                    </Col>
+                                </Row>
+                                <Row style={styles.shopaccessButtonRow}>
+                                    <Col span={5} style={styles.shopaccessButtonCol}>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('1')}>1</div>
+                                    </Col>
+                                    <Col span={5} style={styles.shopaccessButtonCol}>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('2')}>2</div>
+                                    </Col>
+                                    <Col span={5} style={styles.shopaccessButtonCol}>
+                                        <div style={{userSelect: 'none'}} onClick={() => this.onadd('3')}>3</div>
+                                    </Col>
+                                    <Col span={5} style={styles.shopaccessButtonCol}>
+                                        <div style={{userSelect: 'none'}} onClick={this.mininput}>←</div>
                                     </Col>
                                 </Row>
                             </div>

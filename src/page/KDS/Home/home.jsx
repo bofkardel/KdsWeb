@@ -41,6 +41,7 @@ class HomePage extends React.Component {
 class HomePageContent extends React.Component {
     constructor(props) {
         super(props)
+
         this._open = this._open.bind(this);
         this._close = this._close.bind(this);
         this._filter = this._filter.bind(this);
@@ -48,176 +49,14 @@ class HomePageContent extends React.Component {
         this._kitchLast = this._kitchLast.bind(this);
         this.tick = this.tick.bind(this);
         this._guaqi = this._guaqi.bind(this);
+        this._callUp = this._callUp.bind(this);
+        this._sayNext = this._sayNext.bind(this);
+        this._getPageOrder = this._getPageOrder.bind(this);
+        this._getSayOrder = this._getSayOrder.bind(this);
+        this._successly = this._successly.bind(this);
 
         this.state = {
-            orderInfo: [
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 1,
-                    orderName: '001桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-                ,
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 2,
-                    orderName: '002桌',
-                    creatTime: '2018-7-11 09:30:00',
-                    remark: '加辣加辣加辣,请辣死我!加辣加辣加辣,请辣死我!'
-                },
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 3,
-                    orderName: '003桌',
-                    creatTime: '2018-7-11 09:45:00'
-                },
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 4,
-                    orderName: '004桌',
-                    creatTime: '2018-7-11 09:45:00'
-                },
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 5,
-                    orderName: '005桌',
-                    creatTime: '2018-7-14 11:11:00'
-                },
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 6,
-                    orderName: '006桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-                ,
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 7,
-                    orderName: '007桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-                ,
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 8,
-                    orderName: '008桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-                ,
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 9,
-                    orderName: '009桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-                ,
-                {
-                    goodsDetails: [
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'},
-                        {goodName: '香辣粉', count: 2, unitType: '份'}
-                    ],
-                    status: 1,
-                    orderId: 10,
-                    orderName: '010桌',
-                    creatTime: '2018-7-11 09:45:00'
-                }
-
-
-            ],
+            orderInfo: [],
             waimaiInfo: [
                 {
                     goodsDetails: [
@@ -303,8 +142,12 @@ class HomePageContent extends React.Component {
                 {list: []}
             ],
             showKitchen: [],
-            kitchPage: 0
+            pageSay: [],
+            showSay: [],
+            kitchPage: 0,
+            sayPage: 0
         }
+
 
 
     }
@@ -332,12 +175,81 @@ class HomePageContent extends React.Component {
         })
 
     }
+    _getPageOrder(){
+      fetch('/smartpos/kds/order/27', {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8",
+                        "sanyi-device-id":"4036",
+                        "sanyi-shop-id":"13",
+                        "sanyi-version-code":"1",
+                        "sanyi-product-code":"1"
 
+                    }
+                }).then(response => response.json()).then(res=> {
+                  if(res.length>0){
+                    var allOrder=[];
+                    res.forEach(function(io){
+                        var oneOrder={goodsDetails:[]};
+                        io.kdsGoods.forEach(function(ko){
+                            var oneGood={};
+                            oneGood.goodName=ko.goodsLite.goodsName;
+                            oneGood.unitType=ko.goodsLite.unitTypeName;
+                            oneGood.count=ko.kdsDetailLite.quantity;
+                            oneOrder.goodsDetails.push(oneGood);
+                        });
+                        oneOrder.orderId=io.order;
+                        oneOrder.status=io.kdsGoods[0].kdsDetailLite.state;
+                        oneOrder.creatTime=io.kdsGoods[0].kdsDetailLite.createon;
+                        oneOrder.orderName=io.kdsGoods[0].kdsDetailLite.tableName;
+                        allOrder.push(oneOrder);
+                    });
+                    this.setState({orderInfo:allOrder})
+                    this._filter();
+                    console.log(allOrder);
+                  }
+
+      });
+    }
+    _getSayOrder(){
+      fetch('/smartpos/kds/order/hold/27', {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8",
+                        "sanyi-device-id":"4036",
+                        "sanyi-shop-id":"13",
+                        "sanyi-version-code":"1",
+                        "sanyi-product-code":"1"
+
+                    }
+                }).then(response => response.json()).then(res=> {
+                  var allOrder=[];
+                  res.forEach(function(io){
+                      var oneOrder={goodsDetails:[]};
+                      io.kdsGoods.forEach(function(ko){
+                          var oneGood={};
+                          oneGood.goodName=ko.goodsLite.goodsName;
+                          oneGood.unitType=ko.goodsLite.unitTypeName;
+                          oneGood.count=ko.kdsDetailLite.quantity;
+                          oneOrder.goodsDetails.push(oneGood);
+                      });
+                      oneOrder.orderId=io.order;
+                      oneOrder.status=io.kdsGoods[0].kdsDetailLite.state;
+                      oneOrder.creatTime=io.kdsGoods[0].kdsDetailLite.createon;
+                      oneOrder.orderName=io.kdsGoods[0].kdsDetailLite.tableName;
+                      allOrder.push(oneOrder);
+                  });
+                  var showSay = allOrder.slice(0,2);
+                  this.setState({
+                    pageSay:allOrder,
+                    showSay:showSay
+                  })
+                  console.log(res);
+      });
+    }
     componentDidMount() {
-
-        this._filter();
-
-        console.log(this.state.pageInfo);
+      this._getPageOrder();
+      this._getSayOrder();
     }
 
     _open(value) {
@@ -381,15 +293,119 @@ class HomePageContent extends React.Component {
         }
 
     }
+    _sayNext(value) {
+      console.log(Math.ceil((this.state.pageSay.length/2)));
+        if (this.state.sayPage < Math.ceil((this.state.pageSay.length/2))-1) {
+            var nowPage = this.state.sayPage + 1;
+            var showSay=this.state.pageSay;
+            this.setState({
+                showSay: showSay.slice(nowPage*2,nowPage*2+2),
+                sayPage: nowPage
+            });
+        } else {
+            alert("已经是最后一页了!")
+        }
+
+    }
 
     _guaqi(value) {
-        var pageKitchen = this.state.showKitchen;
-        pageKitchen.splice(value, 1);
-        this.setState({
-            showKitchen: pageKitchen
+
+
+        fetch('/smartpos/kds/order/hold/27', {
+                      method: 'POST',
+                      headers: {
+                          "Content-Type": "application/json; charset=UTF-8",
+                          "sanyi-device-id":"4036",
+                          "sanyi-shop-id":"13",
+                          "sanyi-version-code":"1",
+                          "sanyi-product-code":"1"
+
+                      },
+                      body: JSON.stringify({
+                        "value":this.state.showKitchen[value].orderId
+                      })
+                  }).then(response => response.json()).then(res=> {
+                    var pageSay=this.state.pageSay;
+                    console.log(value);
+                    pageSay.push(this.state.showKitchen[value]);
+                    var showSay = pageSay.slice(this.state.sayPage*2,2);
+                    var pageKitchen = this.state.showKitchen;
+                    pageKitchen.splice(value, 1);
+                    this.setState({
+                        showKitchen: pageKitchen,
+                        pageSay:pageSay,
+                        showSay:showSay
+                    });
         });
 
+
+
         // this.interval = setInterval(() => this.tick(this.state.pageInfo[this.state.kitchPage].list),1000);
+    }
+    _callUp(value){
+
+      fetch('/smartpos/kds/order/cook/27', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8",
+                        "sanyi-device-id":"4036",
+                        "sanyi-shop-id":"13",
+                        "sanyi-version-code":"1",
+                        "sanyi-product-code":"1"
+
+                    },
+                    body: JSON.stringify({
+                      "value":this.state.showSay[value].orderId
+                    })
+                }).then(response => response.json()).then(res=> {
+                  clearInterval(this.interval);
+                  this._getPageOrder();
+                  this._getSayOrder();
+                  // var pageSay=this.state.pageSay;
+                  // console.log(value);
+                  // pageSay.push(this.state.showKitchen[value]);
+                  // var showSay = pageSay.slice(this.state.sayPage*2,2);
+                  // var pageKitchen = this.state.showKitchen;
+                  // pageKitchen.splice(value, 1);
+                  // this.setState({
+                  //     showKitchen: pageKitchen,
+                  //     pageSay:pageSay,
+                  //     showSay:showSay
+                  // });
+                  console.log(res);
+      });
+    }
+    _successly(value){
+
+      fetch('/smartpos/kds/order/ack/27', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8",
+                        "sanyi-device-id":"4036",
+                        "sanyi-shop-id":"13",
+                        "sanyi-version-code":"1",
+                        "sanyi-product-code":"1"
+
+                    },
+                    body: JSON.stringify({
+                      "value":this.state.showKitchen[value].orderId
+                    })
+                }).then(response => response.json()).then(res=> {
+                  clearInterval(this.interval);
+                  this._getPageOrder();
+                  // var pageSay=this.state.pageSay;
+                  // console.log(value);
+                  // pageSay.push(this.state.showKitchen[value]);
+                  // var showSay = pageSay.slice(this.state.sayPage*2,2);
+                  // var pageKitchen = this.state.showKitchen;
+                  // pageKitchen.splice(value, 1);
+                  // this.setState({
+                  //     showKitchen: pageKitchen,
+                  //     pageSay:pageSay,
+                  //     showSay:showSay
+                  // });
+                  console.log(res);
+      });
     }
 
     _kitchLast(value) {
@@ -415,6 +431,14 @@ class HomePageContent extends React.Component {
                 showKitchen: this.state.pageInfo[nowPage].list,
                 kitchPage: nowPage
             });
+        } else {
+            alert("已经是第一页了!")
+        }
+
+    }
+    _sayLast(value) {
+        if (this.state.kitchPage > 0) {
+
         } else {
             alert("已经是第一页了!")
         }
@@ -489,7 +513,8 @@ class HomePageContent extends React.Component {
                 bottom: '30px',
                 position: 'fixed',
                 width: '100%',
-                paddingBottom: '20px'
+                paddingBottom: '20px',
+                userSelect:'none'
             },
             titleText: {
                 color: '#333333',
@@ -556,7 +581,7 @@ class HomePageContent extends React.Component {
                 float: 'left',
                 width: '28.5%',
                 border: '1px solid gray',
-                minHeight: '30%',
+                minHeight: '265px',
                 marginTop: '4px',
                 marginLeft: '3.5%',
             },
@@ -655,7 +680,6 @@ class HomePageContent extends React.Component {
             },
             goodsList: {
                 minHeight: '220px',
-                float: 'left',
                 position: 'relative'
             },
             goodsLongList: {
@@ -665,8 +689,9 @@ class HomePageContent extends React.Component {
             },
             sayList: {
                 minHeight: '220px',
-                float: 'left',
+                maxHeight: '230px',
                 position: 'relative',
+                overflowY:'hidden'
             },
             listFooterRed: {
                 position: 'absolute',
@@ -738,7 +763,7 @@ class HomePageContent extends React.Component {
             },
             saypageFooter: {
                 position: 'absolute',
-                bottom: '180px',
+                bottom: '130px',
                 left: '5%'
             },
             up: {
@@ -840,7 +865,7 @@ class HomePageContent extends React.Component {
         }
         const orderInfo = this.state.showKitchen;
         const waimaiInfo = this.state.waimaiInfo;
-        const sayInfo = this.state.sayInfo;
+        const sayInfo = this.state.showSay;
         console.log(this.state.showKitchen);
         return (
 
@@ -884,15 +909,15 @@ class HomePageContent extends React.Component {
                                                     )
                                                 })
                                             }
-                                            {io.color == 'isGreen' ? <div style={styles.listFooterGreen}>
+                                            {io.color == 'isGreen' ? <div style={styles.listFooterGreen} onClick={() => this._successly(index)}>
                                                 <div style={styles.listSuccess}>完成配餐</div>
                                                 <div style={styles.holderTime}>{io.endTime}</div>
                                             </div> : ''}
-                                            {io.color == 'isRed' ? <div style={styles.listFooterRed}>
+                                            {io.color == 'isRed' ? <div style={styles.listFooterRed} onClick={() => this._successly(index)}>
                                                 <div style={styles.listSuccess}>完成配餐</div>
                                                 <div style={styles.holderTime}>{io.endTime}</div>
                                             </div> : ''}
-                                            {io.color == 'isYellow' ? <div style={styles.listFooterYellow}>
+                                            {io.color == 'isYellow' ? <div style={styles.listFooterYellow} onClick={() => this._successly(index)}>
                                                 <div style={styles.listSuccess}>完成配餐</div>
                                                 <div style={styles.holderTime}>{io.endTime}</div>
                                             </div> : ''}
@@ -962,7 +987,7 @@ class HomePageContent extends React.Component {
                     <div style={styles.openHeader}>挂起订单</div>
                     <div style={styles.list}>
                         {
-                            sayInfo.map(function (io, index) {
+                            sayInfo.map((io, index)=> {
                                 return (
                                     <div style={styles.sayPanel}>
                                         <div style={styles.listheaderSay}>
@@ -980,7 +1005,7 @@ class HomePageContent extends React.Component {
                                                     )
                                                 })
                                             }
-                                            <div style={styles.listSayFooter}>
+                                            <div style={styles.listSayFooter} onClick={() => this._callUp(index)}>
                                                 <div style={styles.listSay}>叫起</div>
                                             </div>
                                         </div>
@@ -990,7 +1015,7 @@ class HomePageContent extends React.Component {
                         }
                         <div style={styles.saypageFooter}>
                             <button style={styles.sayup}>上一页</button>
-                            <button style={styles.saydown}>下一页</button>
+                            <button style={styles.saydown} onClick={this._sayNext}>下一页</button>
                         </div>
                     </div>
                 </div>

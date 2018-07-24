@@ -22,7 +22,8 @@ class PageBottom extends React.Component {
                 width: '100%',
                 bottom: '0px',
                 display:'flex',
-                flexDirection:'row'
+                flexDirection:'row',
+                userSelect:'none'
             },
             footDevices: {
                 fontSize: '12px',

@@ -34,7 +34,8 @@ class HistoryPageTitle extends React.Component {
                 color: '#ffffff',
                 height: '33px',
                 fontWeight:'100',
-                letterSpacing:'-0.72px'
+                letterSpacing:'-0.72px',
+                userSelect:'none',
             },
 
             titleText2: {
@@ -43,6 +44,7 @@ class HistoryPageTitle extends React.Component {
                 fontSize: '11px',
                 color: '#ffffff',
                 fontWeight:'100',
+                userSelect:'none',
             },
             titleText3: {
                 height: '33px',
@@ -52,6 +54,7 @@ class HistoryPageTitle extends React.Component {
                 position:'absolute',
                 fontWeight: '100',
                 left:'40%',
+                userSelect:'none',
             },
             titleText4: {
                 float: 'right',
@@ -62,6 +65,7 @@ class HistoryPageTitle extends React.Component {
                 letterSpacing:'-0.72px',
                 color: '#ffffff',
                 textAlign: 'center',
+                userSelect:'none',
             },
             titleText5: {
                 float: 'right',
@@ -72,6 +76,7 @@ class HistoryPageTitle extends React.Component {
                 color: '#ffffff',
                 textAlign: 'center',
                 display: 'none',
+                userSelect:'none',
             },
             titleImg: {
                 float: 'right',
@@ -79,7 +84,8 @@ class HistoryPageTitle extends React.Component {
                 lineHeight: '33px',
                 marginTop: '5px',
                 width:'23px',
-                height:'23px'
+                height:'23px',
+                userSelect:'none',
             }
         }
 
